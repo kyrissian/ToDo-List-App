@@ -59,7 +59,7 @@ def delete_task():
         choice = int(input("Enter task number to delete: "))
         if choice < 1 or choice > len(tasks):
             raise ValueError(f"Must be between 1 and {len(tasks)}.")
-        confirm = input(f"Delete '{tasks[choice - 1]}'? (y/n): ").strip().lower()
+        confirm = input(f"Are you sure? Delete '{tasks[choice - 1]}'? (y/n): ").strip().lower()
         if confirm != "y":
             print("Deletion cancelled.")
             return  # exits the function cleanly, finally still runs
